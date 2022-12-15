@@ -1,31 +1,37 @@
 var yutiNormal = true;
 var yutiClick = 0;
+document.head = document.head || document.getElementsByTagName('head')[0];
+
 
 function showyutiSolcc() {
     yutiClick++;
 
     if ( yutiNormal && yutiClick == 7 ) {
-        document.getElementById("yuti").innerText = "yuti";  // TODO: set the solcc
-        document.getElementById("yuti").classList.add("magicolor");
-        changeFavicon("faviconMagicolor.ico");
-    }
-    else if (yutiNormal && yutiClick == 3216) {
-        document.getElementById("yuti").innerText = "yuti";  // TODO: set the solcc
-        document.getElementById("yuti").classList.add("magicolor");
+        document.getElementById("yuti").innerText = "yuti";  
+        document.getElementById("yuti").style.color = "var(--magicolor)"
         changeFavicon("faviconMagicolor.ico");
     }
     else {
         document.getElementById("yuti").innerText = "yuti";
-        if ( document.getElementById("yuti").classList.contains("magicolor") ) {
-            document.getElementById("yuti").classList.remove("magicolor");
-            changeFavicon("favicon.ico");
-        }
+
+        document.getElementById("yuti").style.color = "red";
+        changeFavicon("favicon.ico");
     }
 
     yutiNormal = !yutiNormal;
-}   
+} 
 
-document.head = document.head || document.getElementsByTagName('head')[0];
+function openSection(src) {
+    window.open(src, target="_self");
+}
+
+function changeRigaToBlue(id) {
+    document.getElementById(id).style = "text-decoration: 3px underline blue;"
+}
+
+function changeRigaToRed(id) {
+    document.getElementById(id).style = "text-decoration: 3px underline red;"
+}
 
 function changeFavicon(src) {
     var link = document.createElement('link'),
@@ -38,5 +44,4 @@ function changeFavicon(src) {
     
     document.head.appendChild(link);
 }
-
 
