@@ -6,14 +6,13 @@ document.head = document.head || document.getElementsByTagName('head')[0];
 function showyutiSolcc() {
     yutiClick++;
 
-    if ( yutiNormal && yutiClick == 7 ) {
+    if ( yutiNormal && yutiClick % 7 == 0) {
         document.getElementById("yuti").innerText = "yuti";  
         document.getElementById("yuti").style.color = "var(--magicolor)"
         changeFavicon("faviconMagicolor.ico");
     }
     else {
         document.getElementById("yuti").innerText = "yuti";
-
         document.getElementById("yuti").style.color = "red";
         changeFavicon("favicon.ico");
     }

@@ -30,6 +30,28 @@ div.btnBar {
     margin-bottom: 50px;
 }
 
+/* Basic infos */
+div.textZone {
+    text-align: center;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+p.title {
+    color: yellow;
+    font-size: 30px;
+    font-weight: 600;  
+}
+
+p.text {
+    color: orange;
+    font-size: 20px;
+    line-height: 25px;  
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
 /* BOX */
 
 div.box {
