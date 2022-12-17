@@ -10,14 +10,14 @@ function showyutiSolcc() {
         document.getElementById("yuti").innerText = "yuti";  
         document.getElementById("yuti").style.color = "var(--magicolor)"
         changeFavicon("faviconMagicolor.ico");
+        yutiNormal = !yutiNormal;
     }
     else {
+        yutiNormal = true;
         document.getElementById("yuti").innerText = "yuti";
         document.getElementById("yuti").style.color = "red";
         changeFavicon("favicon.ico");
     }
-
-    yutiNormal = !yutiNormal;
 } 
 
 function openSection(src) {
