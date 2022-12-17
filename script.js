@@ -3,14 +3,15 @@ var yutiClick = 0;
 document.head = document.head || document.getElementsByTagName('head')[0];
 
 
-function showyutiSolcc() {
+function yutiMotions() {
     yutiClick++;
 
-    if ( yutiNormal && yutiClick % 7 == 0) {
+    if ( yutiNormal && yutiClick == 7) {
         document.getElementById("yuti").innerText = "yuti";  
         document.getElementById("yuti").style.color = "var(--magicolor)"
         changeFavicon("faviconMagicolor.ico");
-        yutiNormal = !yutiNormal;
+        yutiNormal = false;
+        yutiClick = 0;
     }
     else {
         yutiNormal = true;
